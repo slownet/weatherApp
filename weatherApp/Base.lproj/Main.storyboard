@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="weatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bck" translatesAutoresizingMaskIntoConstraints="NO" id="TDp-5c-QZt">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="oWt-6v-sgN">
+                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnC-Vv-ZNc">
+                                <rect key="frame" x="34" y="301.5" width="307" height="64.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="55"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1ko-gA-oAj">
+                                <rect key="frame" x="8" y="210" width="359" height="64.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="55"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c3h-lJ-qeL">
+                                <rect key="frame" x="67" y="383" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1ko-gA-oAj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0K9-Q2-g8e"/>
+                            <constraint firstItem="TDp-5c-QZt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2Xt-J1-09L"/>
+                            <constraint firstItem="1ko-gA-oAj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4n7-0q-12J"/>
+                            <constraint firstItem="TDp-5c-QZt" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7Ma-TJ-HsY"/>
+                            <constraint firstItem="1ko-gA-oAj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kbs-CT-ze0"/>
+                            <constraint firstItem="OnC-Vv-ZNc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MJc-58-hRe"/>
+                            <constraint firstItem="oWt-6v-sgN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NMz-FO-cao"/>
+                            <constraint firstItem="TDp-5c-QZt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PFL-aP-TwP"/>
+                            <constraint firstItem="1ko-gA-oAj" firstAttribute="top" secondItem="oWt-6v-sgN" secondAttribute="bottom" constant="134" id="dNS-yG-N8N"/>
+                            <constraint firstItem="TDp-5c-QZt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="h3W-Xz-cai"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1ko-gA-oAj" secondAttribute="trailing" constant="8" id="lQb-av-Tru"/>
+                            <constraint firstItem="oWt-6v-sgN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mDs-am-LEe"/>
+                            <constraint firstItem="oWt-6v-sgN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="s9C-lN-d2Q"/>
+                            <constraint firstItem="OnC-Vv-ZNc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="si9-uO-x8x"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="1ko-gA-oAj" id="55j-EB-cel"/>
+                        <outlet property="imageView" destination="c3h-lJ-qeL" id="umN-hA-oCV"/>
+                        <outlet property="searchBar" destination="oWt-6v-sgN" id="r2X-cJ-qTu"/>
+                        <outlet property="temperatureLabel" destination="OnC-Vv-ZNc" id="PYZ-hw-FcX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="106.59670164917542"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bck" width="3200" height="2000"/>
+    </resources>
+</document>
