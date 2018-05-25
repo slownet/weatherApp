@@ -78,7 +78,7 @@ extension ViewController: UISearchBarDelegate {
                 var urlString = "https:"
                 urlString += iconString!
                 
-                urlString = "https://tinypng.com/images/example-shrunk.png"
+//                urlString = "https://tinypng.com/images/example-shrunk.png"
                 
                 iconURL = URL(string: urlString)!
                 
@@ -102,6 +102,10 @@ extension ViewController: UISearchBarDelegate {
                             if let imageData = data {
                                 // Finally convert that Data into an image and do what you wish with it.
                                 image = UIImage(data: imageData)!
+                                DispatchQueue.main.sync {
+                                    self?.imageView.image = image
+                                }
+                                
                                 print(3)
                                 // Do something with your image.
                             } else {
@@ -130,8 +134,8 @@ extension ViewController: UISearchBarDelegate {
                         
                     } else {
                         self?.cityLabel.text = locationName
-                        self?.temperatureLabel.text = "\(temperature!)"
-                        self?.imageView.image = image
+                        self?.temperatureLabel.text = "\(temperature!) °C"
+//                        self?.imageView.image = image
 //                        self?.imageView!.addSubview(image)
                     }
                     
